@@ -4,29 +4,31 @@
 }
 <h1>Listar Clientes</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Telefone</th>
-            <th>Data Nascimento</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <!--laço de repetição foreach para listar todos os elementos da lista do aluno-->
-        @foreach (var cliente in Model)
-        {
+<div class="container">
+    <table class="table table-dark table-striped table-hover">
+        <thead>
             <tr>
-                <td>@cliente.Id</td>
-                <td>@cliente.Nome</td>
-                <td>@cliente.Email</td>
-                <td>@cliente.Telefone</td>
-                <td>@cliente.DataNasc</td>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Data Nascimento</th>
             </tr>
-        }
-    </tbody>
+        </thead>
 
-</table>
+        <tbody>
+            <!--laço de repetição foreach para listar todos os elementos da lista do aluno-->
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Telefone</td>
+                    <td>@cliente.DataNasc</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
